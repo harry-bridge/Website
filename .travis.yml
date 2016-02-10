@@ -1,0 +1,25 @@
+language: go
+go:
+  - 1.4
+sudo: false
+install:
+  - go get github.com/spf13/hugo
+  - gem install bundler
+  - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
+cache:
+  directories:
+  - vendor/bundle
+script:
+ - bin/compass compile -e production --force
+ - hugo
+ - bundle exec htmlproof public
+after_script:
+  - _bin/deploy.sh
+branches:
+  only:
+  - master
+env:
+  global:
+    - RESET=true
+    - GH_REF=github.com/pickleshb/Website.git
+    - secure: "0mrlN7TUkKY/J1eoycU4qi3Rc3CwJs7Z5L9zX12lYIfxb/CYCyublQOKRrgJgs2QhrRo5n2ihU9rfbO9oXnLdutf4Tz1Qc57PQWBYL6tTL+3ixPY4X7p2GnPSKY8dCs9cQ8IaF5gQzVHu/7JwmBv+nLc6ROKpbB6DlyxaNiXGQ+sglA2Un/LQb1p+HyjOvKPUzXxW+l96GvllqpsWTHllp2Xi+vIflJu9liC6GhC4N8Z182zouFy0cG+vBMCyHqHtYdqTb1DkFfKUYFzck6SaX3IcjFcx7EOyhWhB8fMf4uFXloJMxvcRP5hLLD6/ru5iSIsiTRVXPcgLfcvGRz7HdSPO7w0DFfPUuRJxoHqgcpnO6iLlEfr/zGN/E7cdoe1t0gBAFf/n5Mf4kGJ3lV+zTpnemHhiipd/oxbEQAICIVEBW+ct/B3kUfB2mosKvOIcm5FoZFqTQy5uO1zV2wjpnV2EeRBS913CT68oiNSa70K/1f9aN2+Zi4AU8x4FpW+ZTwXwyAZfujvF87Nk6EoOoUwKkACxr2MRcA4Q4ufLNOyDTUE3lkV8gUDQc5gcwMgYOebUrXbRuUyxGt5x244eEkOAdB79XxxMK2shXAAD0Hy2KpxSwef65+LtBmRUlwTmo4e4rYMTEN9jSYOanDgPfyVInHYHIeOdP+6A2llpF4="

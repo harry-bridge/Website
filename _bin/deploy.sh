@@ -14,11 +14,15 @@ if [[ $TRAVIS_PULL_REQUEST == "false"  && ($TRAVIS_BRANCH = "master" || $TRAVIS_
   fi
 
   # copy generated HTML site to built branch
-  cp -R public/* gh-pages
+  # cp -R public/* gh-pages
 
   # commit and push generated content to built branch
   # since repository was cloned in write mode with token auth - we can push there
-  cd gh-pages
+  # cd gh-pages
+
+  git init
+  git checkout -b gh-pages
+
   git config user.email "hbbot@harrybridge.co.uk"
   git config user.name "hbbot"
   git add -A .

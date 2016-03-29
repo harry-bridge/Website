@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Only deploy if not PR
-if [[ $TRAVIS_PULL_REQUEST == "false" ]]
+if [[ $TRAVIS_PULL_REQUEST == "false"  && ($TRAVIS_BRANCH = "master" || $TRAVIS_BRANCH = "staging") ]]
   then
   # cleanup
   rm -rf gh-pages
@@ -27,6 +27,7 @@ fi
 
 if [[ $TRAVIS_PULL_REQUEST = "false" && $TRAVIS_BRANCH = "master" ]]
   then
+  git remote add origin https://${GH_TOKEN}@github.com/pickleshb/Website.git
   git push --quiet -f origin gh-pages > /dev/null 2>&1 # Hiding all the output from git push command, to prevent token leak.
 fi
 

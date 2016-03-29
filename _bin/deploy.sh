@@ -23,5 +23,15 @@ if [[ $TRAVIS_PULL_REQUEST == "false" ]]
   git config user.name "hbbot"
   git add -A .
   git commit -a -m "Travis Build $TRAVIS_BUILD_NUMBER for $TRAVIS_COMMIT"
-  git push --quiet origin gh-pages > /dev/null 2>&1 # Hiding all the output from git push command, to prevent token leak.
+fi
+
+if [[ $TRAVIS_PULL_REQUEST = "false" && $TRAVIS_BRANCH = "master" ]]
+  then
+  git push --quiet -f origin gh-pages > /dev/null 2>&1 # Hiding all the output from git push command, to prevent token leak.
+fi
+
+if [[ $TRAVIS_PULL_REQUEST = "false" && $TRAVIS_BRANCH = "staging" ]]
+  then
+  git remote add origin https://${GH_TOKEN}@github.com/pickleshb/Website-Staging.git
+  git push --quiet -f origin gh-pages > /dev/null 2>&1 # Hiding all the output from git push command, to prevent token leak.
 fi

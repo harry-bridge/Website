@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Harry Bridge</title>
-    <link>http://harrybridge.co.uk/</link>
+    <link>http://harrybridge.co.uk/index.xml</link>
     <description>Recent content on Harry Bridge</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

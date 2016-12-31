@@ -1,0 +1,8 @@
+@mixin column($args1, $args2) {
+  -webkit-column-count: $args1;
+  -webkit-column-gap: $args2;
+  -moz-column-count: $args1;
+  -moz-column-gap: $args2;
+  column-count: $args1;
+  column-gap: $args2; 
+}

@@ -1,43 +1,158 @@
 {{ partial "head.html" . }}
 <main>
   <!-- MAIN AREA -->
-  <div class="valign-wrapper" id="full-page">
-    <div class="hide-on-small-only">
-      <div class="container">
-        <div class="row">
-          <div class="valign-wrapper">
-            <div class="col s12 l3">
-              <img class="valign responsive-img" src="imgs/Monogram_4.png" alt="Monogram">
+  <div class="parallax-container full-page">
+    {{ partial "indexnav.html" . }}
+    <div class="valign-wrapper full-page">
+          <div class="container">
+            <div class="row no-margin">
+              <div class="col s12 center">
+                <p class="flow-text">
+                  <a class="white-text shadow" href="/about/">
+                    Freelance Lighting designer
+                    <br>
+                    Freelance lighting, video and sound technician
+                  </a>
+                </p>
+                <p class="flow-text">
+                  <a href="mailto:harry@harrybridge.co.uk" class="white-text shadow"><i class="material-icons">email</i> harry@harrybridge.co.uk</a>
+                </p>
+                <p class="flow-text">
+                  <a href="https://uk.linkedin.com/in/harry-bridge-53016a117"><i class="fa fa-linkedin-square white-text shadow"></i></a>
+                  &nbsp;
+                  <a href="https://www.instagram.com/pickleshb/"><i class="fa fa-instagram white-text shadow"></i></a>
+                </p>
+              </div>
             </div>
-            <div class="col s12 l9">
-              <div class="valign">
-                <h5 class="light hbrown-text flow-text">Website Coming Soon Bitches</h5>
-                  <div class="divider"></div>
-                <h5 class="light hbrown-text flow-text">Contact: info@harrybridge.co.uk</h5>
+            <div class="row hide-on-small-and-down bottom">
+              <div class="col s12 center">
+                <a href="#lightingDesign" class="btn orange lighten-2 grey-text text-darken-3 z-depth-2">Scroll for more</a>
+              </div>
+            </div>
+            <div class="row no-margin-bottom bottom hide-on-med-and-up">
+              <div class="col s12 center">
+                <a href="#lightingDesignSm" class="white-text shadow">Slide for more</a>
+              </div>
+              <div class="col s12 center">
+                <a href="#lightingDesignSm">
+                  <i class="material-icons shadow pad-top white-text">expand_more</i>
+                </a>
               </div>
             </div>
           </div>
         </div>
+    <div class="parallax"><img src="/imgs/index/featureImage.jpg" class="full-page full-img" alt="featureImage"></div>
+  </div>
+
+    <div class="grey darken-4 sideTitle valign-wrapper hide-on-med-and-down">
+      <a href="/lighting" class="grey-text text-darken-3"><h3 class="sideHeader valign">Lighting Design</h3></a>
+      <div class="section scrollspy" id="lightingDesign">
+        {{ $url := "/imgs/LDFeature"}}
+        {{ $imgs := readDir "static/imgs/LDFeature" }}
+        {{ range $index, $item := $imgs }}
+        {{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}
+        {{ if in .Name ".jpg"}}
+        {{ if eq (mod $index 3) 0 }}
+          <div class="flexContainer">
+        {{ end }}
+          <div class="flexItem">
+            <a href="lighting">
+              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
+              <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5>
+            </a>
+          </div>
+          {{ if eq (mod $index 3) 2 }}
+            </div>
+          {{ end }}
+        {{ end }}
+        {{ end }}
       </div>
     </div>
-    <div class="hide-on-med-and-up">
-      <div class="container">
-        <div class="valign">
-          <div class="row">
-            <div class="col s12">
-              <img class="responsive-img" src="/imgs/Monogram_4.png" alt="Monogram">
+
+    <div class="grey darken-4 hide-on-large-only">
+      <div class="section scrollspy center-align" id="#lightingDesignSm">
+        <a class="grey-text text-darken-3" href="/lighting"><h3 class="no-margin-top">Lighting Design</h3></a>
+        {{ $url := "/imgs/LDFeature"}}
+        {{ $imgs := readDir "static/imgs/LDFeature" }}
+        <div class="flexContainer">
+        {{ range $index, $item := $imgs }}
+        {{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}
+        {{ if in .Name ".jpg"}}
+          {{ if in .Name "1" }}
+            <div class="flexItem">
+            <a href="lighting">
+              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
+              <!-- <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5> -->
+            </a>
             </div>
+          {{ end }}
+          {{ if in .Name "2" }}
+          <div class="flexItem">
+            <a href="lighting">
+              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
+              <!-- <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5> -->
+            </a>
           </div>
-          <div class="row">
-            <div class="col s12">
-              <h5 class="light hbrown-text flow-text center">Website Coming Soon</h5>
-                <div class="divider"></div>
-              <h5 class="light hbrown-text flow-text center">Contact: info@harrybridge.co.uk</h5>
-            </div>
-          </div>
+          {{ end }}
+        {{ end }}
+        {{ end }}
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="parallax-container">
+      <div class="parallax"><img src="/imgs/index/third.jpg"></div>
+    </div>
+
+    <div class="grey darken-4 sideTitle valign-wrapper hide-on-med-and-down">
+      <a class="grey-text text-darken-3" href="/projects"><h3 class="sideHeader valign">Projects</h3></a>
+      <div class="section flexContainer">
+        {{ $url := "/imgs/projectsFeature"}}
+        {{ $imgs := readDir "static/imgs/projectsFeature" }}
+        {{ range $index, $item := $imgs }}
+        {{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}
+        {{ if in .Name ".jpg"}}
+          <div class="flexItem">
+            <a href="lighting">
+              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
+              <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5>
+            </a>
+          </div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="grey darken-4 hide-on-large-only">
+      <div class="section center-align">
+        <a class="grey-text text-darken-3" href="/projects"><h3 class="no-margin-top">Projects</h3></a>
+        {{ $url := "/imgs/projectsFeature"}}
+        {{ $imgs := readDir "static/imgs/ProjectsFeature" }}
+        <div class="flexContainer">
+        {{ range $index, $item := $imgs }}
+        {{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}
+        {{ if in .Name ".jpg"}}
+          {{ if in .Name "1" }}
+            <div class="flexItem">
+            <a href="lighting">
+              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
+              <!-- <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5> -->
+            </a>
+            </div>
+          {{ end }}
+          {{ if in .Name "2" }}
+          <div class="flexItem">
+            <a href="lighting">
+              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
+              <!-- <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5> -->
+            </a>
+          </div>
+          {{ end }}
+        {{ end }}
+        {{ end }}
+        </div>
+      </div>
+    </div>
+
 </main>
 {{ partial "footer.html" . }}

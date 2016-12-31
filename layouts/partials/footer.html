@@ -1,6 +1,46 @@
-<footer>
+<footer class="page-footer">
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col s6 m4 left">
+         <a href="contact">Contact</a>
+         <span class="hide-on-small-and-down">
+           <span class="grey-text text-lighten-4">&nbsp; | &nbsp;</span>
+           <a href="qualifications">Qualifications</a>
+         </span>
+        </div>
+        <div class="col m4 center-align hide-on-small-and-down">
+          <a href="mailto:harry@harrybridge.co.uk"><i class="fa fa-envelope"></i></a>
+          &nbsp;
+          <a href="https://uk.linkedin.com/in/harry-bridge-53016a117"><i class="fa fa-linkedin-square"></i></a>
+          &nbsp;
+          <a href="https://www.instagram.com/pickleshb/"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="col s6 m4 right right-align">
+          <span class="grey-text text-lighten-4">© 2016 Harry Bridge</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<script>
+  $( document ).ready(function() {
+    $(".button-collapse").sideNav();
+    $(".parallax").parallax();
+  });
+</script>
+
+<script>
+$(".imgboard>img").each(function(i, img) {
+    $(img).css({
+        position: "relative",
+        left: ($(img).parent().width()/2) - ($(img).width()/2)
+    });
+});
+</script>
       
 </footer>
 </body>

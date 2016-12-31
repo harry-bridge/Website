@@ -225,8 +225,12 @@ nav {
   margin-bottom: 0 !important;
 }
 
-.inline-flex {
-  display: inline-flex !important;
+.justify-center {
+  justify-content: center;
+}
+
+.width {
+  width: 20vw;
 }
 
 a {

@@ -1,14 +1,22 @@
-<nav class="index-nav white-text center-align hide-on-med-and-down">
-  <div class="valign-wrapper inline-flex">
+<nav class="index-nav white-text hide-on-med-and-down">
+  <div class="valign-wrapper justify-center">
     <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
-    <ul class="left hide-on-med-and-down valign">
-      <li><a href="sass.html">Lighting Design</a></li>
-      <li><a href="badges.html">Projects</a></li>
+    <ul class="left hide-on-med-and-down valign width">
+      <div class="right">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        {{ if or (eq $index 0) (eq $index 1) }}
+          <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+        {{ end }}
+      {{ end }}
+      </div>
     </ul>
     <img src="/imgs/logo/monogramOrange.png" id="main-logo">
-    <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">About</a></li>
-      <li><a href="badges.html">Other Work</a></li>
+    <ul class="right hide-on-med-and-down valign width">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        {{ if or (eq $index 2) (eq $index 3) }}
+          <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+        {{ end }}
+      {{ end }}
     </ul>
     </div>
 </nav>
@@ -21,10 +29,8 @@
     </a>
 
     <ul class="side-nav orange-text" id="mobile-nav">
-      <li><a href="sass.html">Lighting Design</a></li>
-      <li><a href="badges.html">Projects</a></li>
-      <li><a href="collapsible.html">About</a></li>
-      <li><a href="mobile.html">Other Work</a></li>
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+      {{ end }}
     </ul>
-
 </nav>

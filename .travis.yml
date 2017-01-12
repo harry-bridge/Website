@@ -14,8 +14,7 @@ before_script:
   - chmod +x _bin/deploy.sh
   - cd $GOPATH/src/github.com/spf13/hugo
   - git checkout tags/v0.18.1
-  - hugo version
-  - hugo
+  - go build
   - cd $DIRECTORY
 script:
  - bin/compass compile -e production --force

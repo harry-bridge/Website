@@ -12,8 +12,8 @@ cache:
 before_script:
   - chmod +x _bin/deploy.sh
   - cd $GOPATH/src/github.com/spf13/hugo
-  - git tag -l
   - git checkout tags/v0.18.1
+  - cd $HOME
 script:
  - bin/compass compile -e production --force
  - hugo version

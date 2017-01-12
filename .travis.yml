@@ -10,7 +10,7 @@ cache:
   directories:
   - vendor/bundle
 before_script:
-  - export DIRECTORY=pwd
+  - export DIRECTORY=$(pwd)
   - chmod +x _bin/deploy.sh
   - cd $GOPATH/src/github.com/spf13/hugo
   - git checkout tags/v0.18.1

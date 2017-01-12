@@ -1,9 +1,10 @@
 language: go
 go:
   - 1.5
-sudo: false
+sudo: true
 install:
   # - go get -v github.com/spf13/hugo/
+  - sudo apt install snapd
   - snap install hugo
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs

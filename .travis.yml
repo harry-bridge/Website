@@ -3,7 +3,7 @@ go:
   - 1.4
 sudo: false
 install:
-  - go get -v github.com/spf13/hugo/v0.18.1
+  - go get -v github.com/spf13/hugo/releases/v0.18.1
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
 cache:

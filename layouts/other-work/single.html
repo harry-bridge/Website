@@ -1,0 +1,49 @@
+{{ partial "head.html" . }}
+
+{{ $url := urlize .Title}}
+
+<header>
+  <div class="parallax-container bordered">
+    {{ partial "nav.html" . }}
+
+    <div class="container" id="page-title">
+      <h1 class="center orange-text text-lighten-2">{{.Title}}</h1>
+      <h5 class="center">For {{ .Params.client }}</h5>
+    </div>
+
+    <div class="parallax"><img src="/imgs/other-work/{{ $url }}/feature.jpg" alt="{{ .Title }}"></div>
+  </div>
+
+</header>
+
+<main class="grey darken-4">
+
+    {{ $imgurl := (delimit (slice "/imgs/other-work" $url "shots" ) "/") }}
+    {{ $dir := readDir (delimit (slice "/static" (trim $imgurl "/")) "/") }}
+
+    <div class="justified-gallery" id="gallery">
+    {{ range $index, $item := $dir }}
+      {{ if in .Name ".jpg" }}
+        <a href="#modal_{{ $index }}" class="hover-opacity">
+          <img src="{{ $imgurl }}/{{ .Name }}" alt="{{ .Name }}">
+        </a>
+      {{ end }}
+    {{ end }}
+    </div>
+    {{ range $index, $item := $dir }}
+      {{ if in .Name ".jpg" }}
+        <div id="modal_{{ $index }}" class="modal click-dismiss">
+          <div class="modal-content no-pad justify-center">
+            <img src="{{ $imgurl }}/{{ .Name }}" alt="{{ .Name }}">
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  <div class="container">
+    <article>
+      {{ .Content }}
+    </article>
+  </div>
+</main>
+
+{{ partial "footer.html" . }}

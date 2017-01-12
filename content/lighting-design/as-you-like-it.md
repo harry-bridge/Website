@@ -7,5 +7,6 @@ date = "2016-12-07T13:50:25Z"
 lightingdesigner = "Harry Bridge"
 director = "Felicity Chilver"
 playwrite = "William Shakespeare"
+rowheight = 300
 
 +++

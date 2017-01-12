@@ -1,21 +1,22 @@
 language: go
 go:
-  - 1.4
+  - 1.5
 sudo: false
 install:
-  - go get -v github.com/spf13/hugo/
+  # - go get -v github.com/spf13/hugo/
+  - snap install hugo
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
 cache:
   directories:
   - vendor/bundle
 before_script:
-  - export DIRECTORY=$(pwd)
+  # - export GO15VENDOREXPERIMENT=1
+  # - export DIRECTORY=$(pwd)
   - chmod +x _bin/deploy.sh
-  - cd $GOPATH/src/github.com/spf13/hugo
-  - git checkout tags/v0.18.1
-  - go build
-  - cd $DIRECTORY
+  # - cd $GOPATH/src/github.com/spf13/hugo
+  # - git checkout tags/v0.18.1
+  # - cd $DIRECTORY
 script:
  - bin/compass compile -e production --force
  - hugo version

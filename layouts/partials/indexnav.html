@@ -5,7 +5,7 @@
       <div class="right">
       {{ range $index, $link := $.Site.Data.nav.links }}
         {{ if or (eq $index 0) (eq $index 1) }}
-          <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+          <li class="light"><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
         {{ end }}
       {{ end }}
       </div>
@@ -14,7 +14,7 @@
     <ul class="right hide-on-med-and-down valign width">
       {{ range $index, $link := $.Site.Data.nav.links }}
         {{ if or (eq $index 2) (eq $index 3) }}
-          <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+          <li class="light"><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
         {{ end }}
       {{ end }}
     </ul>

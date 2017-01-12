@@ -2,7 +2,7 @@ links:
   # The order is important as this is the order the links will display
   -
     Name: Lighting Design
-    URL: /lightingDesign
+    URL: /lighting-design
 
   -
     Name: Projects
@@ -14,4 +14,4 @@ links:
 
   -
     Name: Other Work
-    URL: /otherWork
+    URL: /other-work

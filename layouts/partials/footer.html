@@ -1,47 +1,55 @@
 <footer class="page-footer">
-  <div class="footer-copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col s6 m4 left">
-         <a href="contact">Contact</a>
-         <span class="hide-on-small-and-down">
-           <span class="grey-text text-lighten-4">&nbsp; | &nbsp;</span>
-           <a href="qualifications">Qualifications</a>
-         </span>
-        </div>
-        <div class="col m4 center-align hide-on-small-and-down">
-          <a href="mailto:harry@harrybridge.co.uk"><i class="fa fa-envelope"></i></a>
-          &nbsp;
-          <a href="https://uk.linkedin.com/in/harry-bridge-53016a117"><i class="fa fa-linkedin-square"></i></a>
-          &nbsp;
-          <a href="https://www.instagram.com/pickleshb/"><i class="fa fa-instagram"></i></a>
-        </div>
-        <div class="col s6 m4 right right-align">
-          <span class="grey-text text-lighten-4">© {{ dateFormat "2006" .Site.LastChange }} Harry Bridge</span>
-        </div>
+  <div class="container">
+    <div class="row no-margin-bottom">
+      <div class="col s6 m4 left light">
+       <a href="/about/#contact">Contact</a>
+       <span class="hide-on-small-and-down">
+         <span class="grey-text text-lighten-4">&nbsp; | &nbsp;</span>
+         <a href="/qualifications">Qualifications</a>
+       </span>
+      </div>
+      <div class="col m4 center-align hide-on-small-and-down">
+        <a href="mailto:harry@harrybridge.co.uk"><i class="fa fa-envelope"></i></a>
+        &nbsp;
+        <a href="https://uk.linkedin.com/in/harry-bridge-53016a117"><i class="fa fa-linkedin-square"></i></a>
+        &nbsp;
+        <a href="https://www.instagram.com/pickleshb/"><i class="fa fa-instagram"></i></a>
+      </div>
+      <div class="col s6 m4 right right-align">
+        <span class="grey-text text-lighten-4 light">&copy; {{ dateFormat "2006" .Site.LastChange }} Harry Bridge</span>
       </div>
     </div>
   </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/js/materialize.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
 
 <script>
   $( document ).ready(function() {
     $(".button-collapse").sideNav();
     $(".parallax").parallax();
+    $('.modal').modal({
+      dismissible: true,
+      opacity: 0.92,
+      in_duration: 200,
+      out_duration: 200,
+    });
+    $("#gallery").justifiedGallery({
+      rowHeight: {{ .Params.rowheight | default 350 }},
+      lastRow: 'justify',
+      margins: 0,
+    });
   });
 </script>
 
 <script>
-$(".imgboard>img").each(function(i, img) {
-    $(img).css({
-        position: "relative",
-        left: ($(img).parent().width()/2) - ($(img).width()/2)
-    });
-});
+  $(".modal.click-dismiss").click(function(){
+    var modal_id = $(this).attr("id");
+    $("#" + modal_id).modal("close");
+  });
 </script>
-      
+
 </footer>
 </body>
 </html>

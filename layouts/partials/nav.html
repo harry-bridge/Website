@@ -1,18 +1,16 @@
-<nav>
-  <div class="nav-wrapper">
+<nav class="container page-nav">
     <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-    <a href="/" class="brand-logo">Logo</a>
+    <a href="/" class="brand-logo">
+      <img src="/imgs/logo/monogramOrange.png">
+    </a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        <li class="white-text light"><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+      {{ end }}
     </ul>
     <ul class="side-nav" id="mobile-nav">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+      {{ end }}
     </ul>
-  </div>
 </nav>

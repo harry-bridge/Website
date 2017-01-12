@@ -1,2 +1,11 @@
 <header>
+  <div class="parallax-container">
+    {{ partial "nav.html" . }}
+
+    <div class="container" id="page-title">
+      <h1 class="center orange-text text-lighten-2">{{ .Title }}</h1>
+    </div>
+
+    <div class="parallax"><img src="/imgs/feature/{{ .Params.featureimage | default "overspill" }}.jpg" alt="{{ .Title }}"></div>
+  </div>
 </header>

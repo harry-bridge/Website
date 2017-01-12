@@ -3,7 +3,7 @@ go:
   - 1.4
 sudo: false
 install:
-  - go get -v github.com/spf13/hugo/releases/tag/v0.18.1
+  - go get -v github.com/spf13/hugo/
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
 cache:
@@ -11,6 +11,9 @@ cache:
   - vendor/bundle
 before_script:
   - chmod +x _bin/deploy.sh
+  - cd $GOPATH/src/github.com/spf13/hugo
+  - git tag -l
+  - git checkout tags/v0.18.1
 script:
  - bin/compass compile -e production --force
  - hugo version

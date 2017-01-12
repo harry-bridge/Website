@@ -13,6 +13,7 @@ before_script:
   - chmod +x _bin/deploy.sh
 script:
  - bin/compass compile -e production --force
+ - hugo version
  - hugo
  - bundle exec htmlproof public
 after_script:

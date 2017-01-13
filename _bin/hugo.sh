@@ -6,7 +6,7 @@ wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-6
 echo "Downloaded hugo"
 tar -xgz -f hugo*tar.gz
 echo "Extracted hugo"
-cd hugo
+cd hugo*/
 mv hugo* ~/hugo018
 cd ~/
 chmod +x hugo018

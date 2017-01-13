@@ -1,7 +1,7 @@
 language: go
 go:
   - 1.5
-sudo: true
+sudo: false
 install:
   # - go get -v github.com/spf13/hugo/
   - gem install bundler

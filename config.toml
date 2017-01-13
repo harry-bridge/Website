@@ -1,5 +1,5 @@
 baseurl = "http://harrybridge.co.uk/"
-languageCode = "en-us"
+languageCode = "en-gb"
 title = "Harry Bridge"
 PluralizeListTitles=false
 canonifyurls = false

@@ -1,0 +1,43 @@
+{{ partial "head.html" . }}
+
+{{ $pageTitle := title (string (delimit (split .Title "-") " ")) }}
+
+<header>
+  <div class="parallax-container bordered">
+    {{ partial "nav.html" . }}
+
+    <div class="container" id="page-title">
+      <h1 class="center orange-text text-lighten-2">{{ $pageTitle }}</h1>
+    </div>
+
+    <div class="parallax"><img src="/imgs/shows/_feature.jpg" alt="{{ .Title }}"></div>
+  </div>
+</header>
+
+<main class="grey darken-4">
+  <div class="card-grid">
+
+    {{ $last := sub (len .Data.Pages) 1 }}
+
+    {{ range $index, $item := .Data.Pages.ByDate.Reverse }}
+
+      {{ if eq (mod $index 3) 0 }}
+      <div class="row no-margin-bottom">
+      {{ end }}
+
+      <div class="col s12 m4{{ if and (eq $index $last) (eq (mod $index 3) 0) }} offset-m4{{ end }}">
+        {{ $item.Render "summary" }}
+      </div>
+      
+      {{ if or (eq $index $last) (eq (mod $index 3) 2) }}
+      </div>
+      {{ end }}
+
+      {{ $index := add $index 1 }}
+
+    {{ end }}
+
+  </div>
+</main>
+
+{{ partial "footer.html" . }}

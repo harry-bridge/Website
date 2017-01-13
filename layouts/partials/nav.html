@@ -1,0 +1,16 @@
+<nav class="container page-nav">
+    <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a href="/" class="brand-logo">
+      <img src="/imgs/logo/monogramOrange.png" alt="monogramOrange">
+    </a>
+    <ul class="right hide-on-med-and-down">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        <li class="white-text light"><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+      {{ end }}
+    </ul>
+    <ul class="side-nav" id="mobile-nav">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+      {{ end }}
+    </ul>
+</nav>

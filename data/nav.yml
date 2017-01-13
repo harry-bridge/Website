@@ -1,0 +1,17 @@
+links:
+  # The order is important as this is the order the links will display
+  -
+    Name: Lighting Design
+    URL: /lighting-design
+
+  -
+    Name: Projects
+    URL: /projects
+
+  -
+    Name: About
+    URL: /about
+
+  -
+    Name: Other Work
+    URL: /other-work

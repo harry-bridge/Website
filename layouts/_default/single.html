@@ -1,0 +1,21 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main class="grey lighten-2">
+  <div class="container">
+    <div class="row">
+      <div class="col {{if .Params.contentimage}}s8{{else}}s12{{end}}">
+        <article>
+          {{.Content}}
+        </article>
+      </div>
+      {{ if .Params.contentimage }}
+      <div class="col s4 profile-img">
+        <img src="{{ .Params.contentimage }}" alt="contentimage">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</main>
+
+{{ partial "footer.html" . }}

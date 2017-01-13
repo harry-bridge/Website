@@ -1,0 +1,36 @@
+<nav class="index-nav white-text hide-on-med-and-down">
+  <div class="valign-wrapper justify-center">
+    <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+    <ul class="left hide-on-med-and-down valign width">
+      <div class="right">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        {{ if or (eq $index 0) (eq $index 1) }}
+          <li class="light"><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+        {{ end }}
+      {{ end }}
+      </div>
+    </ul>
+    <img src="/imgs/logo/monogramOrange.png" id="main-logo" alt="monogramOrange">
+    <ul class="right hide-on-med-and-down valign width">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        {{ if or (eq $index 2) (eq $index 3) }}
+          <li class="light"><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+    </div>
+</nav>
+
+<nav class="index-nav container hide-on-large-only">
+    <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons white-text">menu</i></a>
+    
+    <a href="/" id="mobile-logo">
+      <img src="/imgs/logo/monogramOrange.png" alt="monogramOrange">
+    </a>
+
+    <ul class="side-nav orange-text" id="mobile-nav">
+      {{ range $index, $link := $.Site.Data.nav.links }}
+        <li><a href="{{ $link.URL }}">{{ $link.Name }}</a></li>
+      {{ end }}
+    </ul>
+</nav>

@@ -20,7 +20,6 @@ after_script:
 branches:
   only:
   - master
-  - staging
 env:
   global:
     - RESET=false

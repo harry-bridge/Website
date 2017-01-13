@@ -1,6 +1,6 @@
 +++
 title = "Qualifications"
-draft = true
+draft = false
 date = "2017-01-07T07:44:11Z"
 
 +++

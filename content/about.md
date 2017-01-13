@@ -1,8 +1,8 @@
 +++
 title = "About"
-draft = true
+draft = false
 date = "2017-01-07T07:39:08Z"
-featureimage = "shopping-and-fucking"
+featureimage = "shops-1"
 contentimage = "/imgs/hb-square.jpg"
 
 +++

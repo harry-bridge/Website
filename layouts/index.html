@@ -51,7 +51,7 @@
   </div>
 
     <div class="grey darken-4 sideTitle valign-wrapper hide-on-med-and-down">
-      <h3 class="sideHeader valign grey-text text-darken-3"><a href="/lighting-design">Lighting Design</a></h3>
+      <h3 class="sideHeader valign grey-text text-darken-3"><a href="/lighting-design/">Lighting Design</a></h3>
       <div class="section scrollspy imgbox" id="lightingDesign">
         {{ $url := "/imgs/LDFeature"}}
         {{ $imgs := readDir "static/imgs/LDFeature" }}
@@ -62,7 +62,7 @@
           <div class="flexContainer">
         {{ end }}
           <div class="flexItem">
-            <a href="/lighting-design/{{ $humanName | urlize }}">
+            <a href="/lighting-design/{{ $humanName | urlize }}/">
               <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
               <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5>
             </a>
@@ -77,7 +77,7 @@
 
     <div class="grey darken-4 hide-on-large-only">
       <div class="section scrollspy center-align" id="lightingDesignSm">
-        <a class="grey-text text-darken-3" href="/lighting-design"><h3 class="no-margin-top">Lighting Design</h3></a>
+        <a class="grey-text text-darken-3" href="/lighting-design/"><h3 class="no-margin-top">Lighting Design</h3></a>
         {{ $url := "/imgs/LDFeature"}}
         {{ $imgs := readDir "static/imgs/LDFeature" }}
         <div class="flexContainer">
@@ -86,14 +86,14 @@
         {{ if in .Name ".jpg"}}
           {{ if in .Name "1" }}
             <div class="flexItem">
-            <a href="/lighting-design">
+            <a href="/lighting-design/">
               <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
             </a>
             </div>
           {{ end }}
           {{ if in .Name "2" }}
           <div class="flexItem">
-            <a href="/lighting-design">
+            <a href="/lighting-design/">
               <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
             </a>
           </div>
@@ -109,7 +109,7 @@
     </div>
 
     <div class="grey darken-4 sideTitle valign-wrapper hide-on-med-and-down">
-      <h3 class="sideHeader valign grey-text text-darken-3"><a href="/projects">Projects</a></h3>
+      <h3 class="sideHeader valign grey-text text-darken-3"><a href="/projects/">Projects</a></h3>
       <div class="section imgbox">
         <div class="flexContainer">
         {{ $url := "/imgs/projectsFeature"}}
@@ -118,7 +118,7 @@
         {{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}
         {{ if in .Name ".jpg"}}
           <div class="flexItem">
-            <a href="/projects">
+            <a href="/projects/">
               <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
               <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5>
             </a>
@@ -131,7 +131,7 @@
 
     <div class="grey darken-4 hide-on-large-only">
       <div class="section center-align">
-        <a class="grey-text text-darken-3" href="/projects"><h3 class="no-margin-top">Projects</h3></a>
+        <a class="grey-text text-darken-3" href="/projects/"><h3 class="no-margin-top">Projects</h3></a>
         {{ $url := "/imgs/projectsFeature"}}
         {{ $imgs := readDir "static/imgs/projectsFeature" }}
         <div class="flexContainer">
@@ -140,7 +140,7 @@
         {{ if in .Name ".jpg"}}
           {{ if in .Name "1" }}
             <div class="flexItem">
-            <a href="/projects">
+            <a href="/projects/">
               <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
               <!-- <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5> -->
             </a>
@@ -148,7 +148,7 @@
           {{ end }}
           {{ if in .Name "2" }}
           <div class="flexItem">
-            <a href="/lighting-design">
+            <a href="/lighting-design/">
               <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
               <!-- <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5> -->
             </a>

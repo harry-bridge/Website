@@ -10,7 +10,7 @@
       {{ end }}
       </div>
     </ul>
-    <img src="/imgs/logo/monogramOrange.png" id="main-logo">
+    <img src="/imgs/logo/monogramOrange.png" id="main-logo" alt="monogramOrange">
     <ul class="right hide-on-med-and-down valign width">
       {{ range $index, $link := $.Site.Data.nav.links }}
         {{ if or (eq $index 2) (eq $index 3) }}
@@ -25,7 +25,7 @@
     <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons white-text">menu</i></a>
     
     <a href="/" id="mobile-logo">
-      <img src="/imgs/logo/monogramOrange.png" />
+      <img src="/imgs/logo/monogramOrange.png" alt="monogramOrange">
     </a>
 
     <ul class="side-nav orange-text" id="mobile-nav">

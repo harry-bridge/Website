@@ -1,0 +1,4 @@
+DirectoryPath: "public"
+IgnoreURLs:
+  - "https://uk.linkedin.com/in/harry-bridge-53016a117"
+CacheExpires: "3m"

@@ -14,7 +14,7 @@ script:
  - bin/compass compile -e production --force
  - ~/hugo018 version
  - ~/hugo018
- - bundle exec htmlproof public
+ - bundle exec htmlproof public --allow-hash-href true --url-ignore https://uk.linkedin.com/*
 after_script:
   - _bin/deploy.sh
 branches:

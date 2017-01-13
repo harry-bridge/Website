@@ -4,20 +4,13 @@ go:
 sudo: true
 install:
   # - go get -v github.com/spf13/hugo/
-  - sudo apt install snapd
-  - snap install hugo
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
 cache:
   directories:
   - vendor/bundle
 before_script:
-  # - export GO15VENDOREXPERIMENT=1
-  # - export DIRECTORY=$(pwd)
-  - chmod +x _bin/deploy.sh
-  # - cd $GOPATH/src/github.com/spf13/hugo
-  # - git checkout tags/v0.18.1
-  # - cd $DIRECTORY
+  - _bin/hugo.sh
 script:
  - bin/compass compile -e production --force
  - hugo version

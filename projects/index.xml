@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Harry Bridge</title>
+    <link>http://harrybridge.co.uk/projects/index.xml</link>
+    <description>Recent content in Projects on Harry Bridge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 12 Jan 2017 11:59:26 +0000</lastBuildDate>
+    <atom:link href="http://harrybridge.co.uk/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Video Colours</title>
+      <link>http://harrybridge.co.uk/projects/video-colours/</link>
+      <pubDate>Thu, 12 Jan 2017 11:59:26 +0000</pubDate>
+      
+      <guid>http://harrybridge.co.uk/projects/video-colours/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TEC PA &amp; Lighting</title>
+      <link>http://harrybridge.co.uk/projects/tec-pa-and-lighting/</link>
+      <pubDate>Thu, 12 Jan 2017 11:59:14 +0000</pubDate>
+      
+      <guid>http://harrybridge.co.uk/projects/tec-pa-and-lighting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CJB Science</title>
+      <link>http://harrybridge.co.uk/projects/cb-science/</link>
+      <pubDate>Thu, 12 Jan 2017 11:59:02 +0000</pubDate>
+      
+      <guid>http://harrybridge.co.uk/projects/cb-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NewTheatre Ticketing</title>
+      <link>http://harrybridge.co.uk/projects/nt-tickets/</link>
+      <pubDate>Thu, 12 Jan 2017 11:58:53 +0000</pubDate>
+      
+      <guid>http://harrybridge.co.uk/projects/nt-tickets/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

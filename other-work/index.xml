@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Other-work on Harry Bridge</title>
+    <link>http://harrybridge.co.uk/other-work/index.xml</link>
+    <description>Recent content in Other-work on Harry Bridge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 12 Jan 2017 12:27:18 +0000</lastBuildDate>
+    <atom:link href="http://harrybridge.co.uk/other-work/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Trent Projection</title>
+      <link>http://harrybridge.co.uk/other-work/trent-projection/</link>
+      <pubDate>Thu, 12 Jan 2017 12:27:18 +0000</pubDate>
+      
+      <guid>http://harrybridge.co.uk/other-work/trent-projection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

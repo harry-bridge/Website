@@ -41,7 +41,7 @@
       </div>
     <div class="parallax">
       {{ range $index, $item := .Site.Data.indexFeature.photos }}
-        <img src="/imgs/index/{{ $item.Name | urlize }}.jpg" class="full-page full-img" alt="featureImage">
+        <img src="/imgs/feature/{{ $item.Name | urlize }}.jpg" class="full-page full-img" alt="featureImage">
         <div class="parallax-caption white-text">
           <h5 class="super-light">{{ $item.Name }}</h5>
           <h6 class="super-light"> By {{ $item.Playwrite }}</h6>

@@ -24,7 +24,7 @@
     <div class="justified-gallery" id="gallery">
     {{ range $index, $item := $dir }}
       {{ if in .Name ".jpg" }}
-        <a href="#modal_{{ $index }}" class="hover-opacity">
+        <a href="#modal_{{ $index }}" class="hover-opacity remove-on-med-and-down">
           <img src="{{ $imgurl }}/{{ .Name }}" alt="{{ .Name }}">
         </a>
       {{ end }}

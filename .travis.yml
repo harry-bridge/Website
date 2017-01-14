@@ -5,6 +5,7 @@ sudo: false
 install:
   # - go get -v github.com/spf13/hugo/
   - _bin/hugo.sh
+  - _bin/htmltest.sh
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
   - curl https://f000.backblazeb2.com/file/wjdp-lib/htmltest > _bin/htmltest
@@ -16,8 +17,8 @@ script:
  - bin/compass compile -e production --force
  - ~/hugo018 version
  - ~/hugo018
- - _bin/htmltest --version
- - _bin/htmltest
+ - ~/htmltest --version
+ - ~/htmltest
 after_script:
   - _bin/deploy.sh
 branches:

@@ -299,6 +299,14 @@
 </script>
 
 <script>
+  $( document ).ready(function() {
+    if ( $( document ).width() <= 992 ){
+      $(".remove-on-med-and-down").removeAttr("href");
+    }
+  });
+</script>
+
+<script>
   $(".modal.click-dismiss").click(function(){
     var modal_id = $(this).attr("id");
     $("#" + modal_id).modal("close");

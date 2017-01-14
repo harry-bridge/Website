@@ -80,55 +80,55 @@
     <div class="justified-gallery" id="gallery">
     
       
-        <a href="#modal_0" class="hover-opacity">
+        <a href="#modal_0" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-1.jpg" alt="ayli-1.jpg">
         </a>
       
     
       
-        <a href="#modal_1" class="hover-opacity">
+        <a href="#modal_1" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-2.jpg" alt="ayli-2.jpg">
         </a>
       
     
       
-        <a href="#modal_2" class="hover-opacity">
+        <a href="#modal_2" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-3.jpg" alt="ayli-3.jpg">
         </a>
       
     
       
-        <a href="#modal_3" class="hover-opacity">
+        <a href="#modal_3" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-4.jpg" alt="ayli-4.jpg">
         </a>
       
     
       
-        <a href="#modal_4" class="hover-opacity">
+        <a href="#modal_4" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-5.jpg" alt="ayli-5.jpg">
         </a>
       
     
       
-        <a href="#modal_5" class="hover-opacity">
+        <a href="#modal_5" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-6.jpg" alt="ayli-6.jpg">
         </a>
       
     
       
-        <a href="#modal_6" class="hover-opacity">
+        <a href="#modal_6" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-7.jpg" alt="ayli-7.jpg">
         </a>
       
     
       
-        <a href="#modal_7" class="hover-opacity">
+        <a href="#modal_7" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-8.jpg" alt="ayli-8.jpg">
         </a>
       
     
       
-        <a href="#modal_8" class="hover-opacity">
+        <a href="#modal_8" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/as-you-like-it/prodshots/ayli-9.jpg" alt="ayli-9.jpg">
         </a>
       
@@ -256,6 +256,14 @@
       lastRow: 'justify',
       margins: 0,
     });
+  });
+</script>
+
+<script>
+  $( document ).ready(function() {
+    if ( $( document ).width() <= 992 ){
+      $(".remove-on-med-and-down").removeAttr("href");
+    }
   });
 </script>
 

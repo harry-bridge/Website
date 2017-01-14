@@ -80,73 +80,73 @@
     <div class="justified-gallery" id="gallery">
     
       
-        <a href="#modal_0" class="hover-opacity">
+        <a href="#modal_0" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-1.jpg" alt="shops-1.jpg">
         </a>
       
     
       
-        <a href="#modal_1" class="hover-opacity">
+        <a href="#modal_1" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-10.jpg" alt="shops-10.jpg">
         </a>
       
     
       
-        <a href="#modal_2" class="hover-opacity">
+        <a href="#modal_2" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-11.jpg" alt="shops-11.jpg">
         </a>
       
     
       
-        <a href="#modal_3" class="hover-opacity">
+        <a href="#modal_3" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-12.jpg" alt="shops-12.jpg">
         </a>
       
     
       
-        <a href="#modal_4" class="hover-opacity">
+        <a href="#modal_4" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-2.jpg" alt="shops-2.jpg">
         </a>
       
     
       
-        <a href="#modal_5" class="hover-opacity">
+        <a href="#modal_5" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-3.jpg" alt="shops-3.jpg">
         </a>
       
     
       
-        <a href="#modal_6" class="hover-opacity">
+        <a href="#modal_6" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-4.jpg" alt="shops-4.jpg">
         </a>
       
     
       
-        <a href="#modal_7" class="hover-opacity">
+        <a href="#modal_7" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-5.jpg" alt="shops-5.jpg">
         </a>
       
     
       
-        <a href="#modal_8" class="hover-opacity">
+        <a href="#modal_8" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-6.jpg" alt="shops-6.jpg">
         </a>
       
     
       
-        <a href="#modal_9" class="hover-opacity">
+        <a href="#modal_9" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-7.jpg" alt="shops-7.jpg">
         </a>
       
     
       
-        <a href="#modal_10" class="hover-opacity">
+        <a href="#modal_10" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-8.jpg" alt="shops-8.jpg">
         </a>
       
     
       
-        <a href="#modal_11" class="hover-opacity">
+        <a href="#modal_11" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/shopping-and-fucking/prodshots/shops-9.jpg" alt="shops-9.jpg">
         </a>
       
@@ -298,6 +298,14 @@
       lastRow: 'justify',
       margins: 0,
     });
+  });
+</script>
+
+<script>
+  $( document ).ready(function() {
+    if ( $( document ).width() <= 992 ){
+      $(".remove-on-med-and-down").removeAttr("href");
+    }
   });
 </script>
 

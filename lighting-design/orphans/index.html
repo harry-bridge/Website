@@ -80,55 +80,55 @@
     <div class="justified-gallery" id="gallery">
     
       
-        <a href="#modal_0" class="hover-opacity">
+        <a href="#modal_0" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-1.jpg" alt="orphans-1.jpg">
         </a>
       
     
       
-        <a href="#modal_1" class="hover-opacity">
+        <a href="#modal_1" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-2.jpg" alt="orphans-2.jpg">
         </a>
       
     
       
-        <a href="#modal_2" class="hover-opacity">
+        <a href="#modal_2" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-3.jpg" alt="orphans-3.jpg">
         </a>
       
     
       
-        <a href="#modal_3" class="hover-opacity">
+        <a href="#modal_3" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-4.jpg" alt="orphans-4.jpg">
         </a>
       
     
       
-        <a href="#modal_4" class="hover-opacity">
+        <a href="#modal_4" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-5.jpg" alt="orphans-5.jpg">
         </a>
       
     
       
-        <a href="#modal_5" class="hover-opacity">
+        <a href="#modal_5" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-6.jpg" alt="orphans-6.jpg">
         </a>
       
     
       
-        <a href="#modal_6" class="hover-opacity">
+        <a href="#modal_6" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-7.jpg" alt="orphans-7.jpg">
         </a>
       
     
       
-        <a href="#modal_7" class="hover-opacity">
+        <a href="#modal_7" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-8.jpg" alt="orphans-8.jpg">
         </a>
       
     
       
-        <a href="#modal_8" class="hover-opacity">
+        <a href="#modal_8" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/orphans/prodshots/orphans-9.jpg" alt="orphans-9.jpg">
         </a>
       
@@ -256,6 +256,14 @@
       lastRow: 'justify',
       margins: 0,
     });
+  });
+</script>
+
+<script>
+  $( document ).ready(function() {
+    if ( $( document ).width() <= 992 ){
+      $(".remove-on-med-and-down").removeAttr("href");
+    }
   });
 </script>
 

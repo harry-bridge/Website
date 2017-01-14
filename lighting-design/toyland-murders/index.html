@@ -80,55 +80,55 @@
     <div class="justified-gallery" id="gallery">
     
       
-        <a href="#modal_0" class="hover-opacity">
+        <a href="#modal_0" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-1.jpg" alt="toyland-1.jpg">
         </a>
       
     
       
-        <a href="#modal_1" class="hover-opacity">
+        <a href="#modal_1" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-10.jpg" alt="toyland-10.jpg">
         </a>
       
     
       
-        <a href="#modal_2" class="hover-opacity">
+        <a href="#modal_2" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-2.jpg" alt="toyland-2.jpg">
         </a>
       
     
       
-        <a href="#modal_3" class="hover-opacity">
+        <a href="#modal_3" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-3.jpg" alt="toyland-3.jpg">
         </a>
       
     
       
-        <a href="#modal_4" class="hover-opacity">
+        <a href="#modal_4" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-4.jpg" alt="toyland-4.jpg">
         </a>
       
     
       
-        <a href="#modal_5" class="hover-opacity">
+        <a href="#modal_5" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-6.jpg" alt="toyland-6.jpg">
         </a>
       
     
       
-        <a href="#modal_6" class="hover-opacity">
+        <a href="#modal_6" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-7.jpg" alt="toyland-7.jpg">
         </a>
       
     
       
-        <a href="#modal_7" class="hover-opacity">
+        <a href="#modal_7" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-8.jpg" alt="toyland-8.jpg">
         </a>
       
     
       
-        <a href="#modal_8" class="hover-opacity">
+        <a href="#modal_8" class="hover-opacity remove-on-med-and-down">
           <img src="/imgs/shows/the-toyland-murders/prodshots/toyland-9.jpg" alt="toyland-9.jpg">
         </a>
       
@@ -256,6 +256,14 @@
       lastRow: 'justify',
       margins: 0,
     });
+  });
+</script>
+
+<script>
+  $( document ).ready(function() {
+    if ( $( document ).width() <= 992 ){
+      $(".remove-on-med-and-down").removeAttr("href");
+    }
   });
 </script>
 

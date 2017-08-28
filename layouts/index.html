@@ -108,26 +108,26 @@
       <div class="parallax"><img src="/imgs/feature/shops-2.jpg" alt="parallax1"></div>
     </div>
 
-    <div class="grey darken-4 sideTitle valign-wrapper hide-on-med-and-down">
-      <h3 class="sideHeader valign grey-text text-darken-3"><a href="/projects/">Projects</a></h3>
-      <div class="section imgbox">
-        <div class="flexContainer">
-        {{ $url := "/imgs/projectsFeature"}}
-        {{ $imgs := readDir "static/imgs/projectsFeature" }}
-        {{ range $index, $item := $imgs }}
-        {{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}
-        {{ if in .Name ".jpg"}}
-          <div class="flexItem">
-            <a href="/projects/">
-              <img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">
-              <h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5>
-            </a>
-          </div>
-        {{ end }}
-        {{ end }}
-        </div>
-      </div>
-    </div>
+    <!--<div class="grey darken-4 sideTitle valign-wrapper hide-on-med-and-down">-->
+      <!--<h3 class="sideHeader valign grey-text text-darken-3"><a href="/projects/">Projects</a></h3>-->
+      <!--<div class="section imgbox">-->
+        <!--<div class="flexContainer">-->
+        <!--{{ $url := "/imgs/projectsFeature"}}-->
+        <!--{{ $imgs := readDir "static/imgs/projectsFeature" }}-->
+        <!--{{ range $index, $item := $imgs }}-->
+        <!--{{ $humanName := index ( split ( index ( split .Name "." ) 0 ) "-" ) 1 }}-->
+        <!--{{ if in .Name ".jpg"}}-->
+          <!--<div class="flexItem">-->
+            <!--<a href="/projects/">-->
+              <!--<img src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}">-->
+              <!--<h5 class="orange-text text-lighten-2 center-align overlay">{{ $humanName }}</h5>-->
+            <!--</a>-->
+          <!--</div>-->
+        <!--{{ end }}-->
+        <!--{{ end }}-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
 
     <div class="grey darken-4 hide-on-large-only">
       <div class="section center-align">

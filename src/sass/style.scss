@@ -395,3 +395,33 @@ a {
     color: $secondary-color !important;
   }
 }
+
+//.hover-link {
+//  padding-bottom: 3px;
+//  text-decoration: none;
+//  color: inherit;
+//  position: relative;
+//  display: inline-block;
+//
+//  &:before {
+//    transition: transform 0.2s, opacity 0.3s;
+//    background-color: currentColor;
+//    content: '';
+//    height: 2px;
+//    position: absolute;
+//    top: 100%;
+//    width: 104%;
+//    transform: translate(-2%, 6px);
+//    opacity: 0;
+//  }
+//
+//  &:hover::before {
+//    transition: transform 0.2s, opacity 0.3s;
+//    transform: translate(-2%, -3px);
+//    opacity: 1;
+//  }
+//
+//  &:active::before {
+//    color: rgba(0, 0, 0, 0.4) !important;
+//  }
+//}
